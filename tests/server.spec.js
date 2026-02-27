@@ -12,8 +12,15 @@ describe("Operaciones CRUD de cafes", () => {
     //tamaño del Array:
     const cantidadCafes = cafe.length;
 
+    //revisar statusCode
     expect(status).toBe(200);
+
+    //Doble revisión: es una instancia de tipo array?
     expect(cafe).toBeInstanceOf(Array);
+    // Exclusivamente un array? (Object también pasa el test, por tanto aquí se filtra))
+    expect(Array.isArray(cafe)).toBe(true);
+
+    //Desde que el length no sea 0, el test pasa.
     expect(cantidadCafes).not.toBe(0);
   });
 
@@ -70,4 +77,10 @@ describe("Operaciones CRUD de cafes", () => {
     const status = statusCode;
     expect(status).toBe(400);
   });
+
+/*   //afterAll
+  afterAll((done) => {
+    server.close(done);
+  }); */
+  
 });
