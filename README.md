@@ -1,4 +1,4 @@
-# Cafetería - Tests Unitario
+# Cafetería - Test Unitario
 
 Ejercicio de testing unitario a una API REST con
 JEST y el paquete supertest.
