@@ -77,10 +77,4 @@ describe("Operaciones CRUD de cafes", () => {
     const status = statusCode;
     expect(status).toBe(400);
   });
-
-/*   //afterAll
-  afterAll((done) => {
-    server.close(done);
-  }); */
-  
 });
